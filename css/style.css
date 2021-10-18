@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1140px !important;
+}
+.main{
+    background: url(../img/banner.jpg) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.logo img{
+    width: 100px;
+}
+.nav-link{
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+.search{
+    cursor: pointer;
+}
+.text .container{
+    display: flex;
+    align-items: center;
+}
+.text h1{
+    color: #fff;
+    font-size: 95px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+.socials{
+    position: relative;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 40px;
+}
+.social .fab{
+    color: #fff;
+    font-size: 30px;
+}
+.social i{
+    display: flex;
+}
+.social  i::after{
+    content: attr(data-text);
+    background-color: #fff;
+    color: #DF7D5F;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 14px;
+    width: 150px;
+    height: 24px;
+    position: absolute;
+    border-radius: 0px 12px 12px 0px;
+    opacity: 0;
+    transition: .4s ease all;
+    margin-top: 3px;
+    margin-left: 25px;
+}
+.social i:hover::after
+{
+    opacity: 1;
+}
+.socials .btn{
+    border-radius: 50px;
+    padding: 10px 60px;
+}
+.gradi{
+    background: linear-gradient(#FF2222,#FF6F6F);
+    width: 284px;
+    height: 126px;
+    bottom: -27px;
+    right: -17px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.gradi h3{
+    font-size: 35px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+@media screen and (max-width: 1199px){
+    .container{
+        width: 960px;
+    }
+}
+@media screen and (max-width: 991px){
+    .container{
+        width: 720px;
+    }
+}
+@media screen and (max-width: 767px){
+    .container{
+        width: 540px;
+    }
+}
+@media screen and (max-width: 575px){
+    .container{
+        width: 100%;
+        padding: 0 15px;
+    }
+}
