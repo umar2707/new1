@@ -8,13 +8,20 @@ a{
     text-decoration: none;
 }
 .container{
-    width: 1140px !important;
+    width: 1664px !important;
+}
+.navbar{
+    height: 15vh;
 }
 .main{
     background: url(../img/banner.jpg) center center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
+}
+.mainbody{
+    min-height: 84vh;
+    position: relative;
 }
 .logo img{
     width: 100px;
@@ -25,6 +32,9 @@ a{
 }
 .search{
     cursor: pointer;
+}
+.text{
+    margin-top: 7rem;
 }
 .text .container{
     display: flex;
@@ -37,13 +47,15 @@ a{
     font-weight: 800;
 }
 .socials{
-    position: relative;
+    position: absolute;
+    bottom: 10%;
 }
 .social{
     display: flex;
     flex-direction: column;
     position: absolute;
     margin-left: 40px;
+    left: -20%;
 }
 .social .fab{
     color: #fff;
@@ -92,6 +104,36 @@ a{
 .gradi h3{
     font-size: 35px;
     text-align: center;
+}
+.texthead{
+    display: flex;
+    align-items: center;
+}
+.texthead hr{
+    width: 97px !important;
+    color: #FF2222;
+    height: 3px;
+    opacity: 1 !important;
+}
+.texthead h3{
+    color: #FF2222;
+    font-weight: 900;
+    font-size: 45px;
+    margin-left: 20px;
+}
+.textbody h1{
+    font-size: 65px;
+    font-weight: bold;
+    line-height: 75px;
+}
+.textfoot{
+
+}
+.textfoot h3{
+    font-size: 45px;
+}
+.textfoot p{
+    font-size: 35px;
 }
 
 
