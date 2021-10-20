@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 a{
     text-decoration: none;
@@ -11,30 +15,32 @@ a{
     width: 1664px !important;
 }
 .navbar{
-    height: 15vh;
+    padding: 1rem 0;
 }
 .main{
     background: url(../img/banner.jpg) center center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100vh;
 }
 .mainbody{
-    min-height: 84vh;
+    padding-bottom: 15rem;
     position: relative;
 }
 .logo img{
     width: 100px;
 }
+.nav-item{
+    margin: 7px 10px
+}
 .nav-link{
     color: #fff !important;
-    font-weight: 400 !important;
+    font-weight: 700 ;
 }
 .search{
     cursor: pointer;
 }
 .text{
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 .text .container{
     display: flex;
@@ -49,59 +55,103 @@ a{
 .socials{
     position: absolute;
     bottom: 10%;
+    display: flex;
+    align-items: center;
 }
 .social{
     display: flex;
     flex-direction: column;
     position: absolute;
-    margin-left: 40px;
-    left: -20%;
+}
+.soctex{
+    color: #FF6F6F;
+    background-color: #fff;
+    width: 230px;
+    height: 28px;
+    border-radius: 0px 10px 10px 0;
+    position: absolute;
+    text-align: center;
+    left: -2px;
+    opacity: 0;
+    z-index: 1;
+    transition: .5s all ease;
+}
+/* .soctex:hover .soctex::before{
+    content: attr(data-text);
+    position: absolute;
+    color: #FF6F6F;
+    top: 0;
+    left: 0;
+} */
+.icons{
+    position: relative;
+    z-index: 9999;
+}
+.social a:hover .soctex{
+    opacity: 1;
 }
 .social .fab{
-    color: #fff;
-    font-size: 30px;
+    color: #fff ;
+    font-size: 25px;
+    margin: 3px 0;
 }
-.social i{
-    display: flex;
-}
-.social  i::after{
-    content: attr(data-text);
-    background-color: #fff;
-    color: #DF7D5F;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-size: 14px;
-    width: 150px;
-    height: 24px;
-    position: absolute;
-    border-radius: 0px 12px 12px 0px;
-    opacity: 0;
-    transition: .4s ease all;
-    margin-top: 3px;
-    margin-left: 25px;
-}
-.social i:hover::after
-{
-    opacity: 1;
+.social a:hover .social a .icons{
+    color: #FF6F6F !important;
 }
 .socials .btn{
     border-radius: 50px;
     padding: 10px 60px;
+    border: 3px solid #fff;
+}
+.socials .btn:hover{
+    background-color: #fff;
+    color: #FF6F6F;
 }
 .gradi{
-    background: linear-gradient(#FF2222,#FF6F6F);
+    top: 78%;
+    right: 258px;
+}
+.gradintext1{
+    background-color: #EBEBEB;
+    color: #FF2222;
     width: 284px;
     height: 126px;
-    bottom: -27px;
-    right: -17px;
-    border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    border-radius: 30px;
+    position: absolute;
+    cursor: default;
 }
-.gradi h3{
+.gradintext{
+    background: linear-gradient(#FF2222,#FF6F6F);
+    width: 284px;
+    height: 126px;
+    border-radius: 30px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    align-items: center;
+    color: #fff;
+    transition: .4s ease all;
+    cursor: default;
+}
+.gradintext1 span{
+    font-size: 55px;
+}
+.gradi:hover .gradintext{
+    top: 123px;
+    border-radius: 0 0 30px 30px;
+}
+.gradi:hover .gradintext::before{
+    opacity: 1;
+}
+.gradi:hover .gradintext1{
+    border-radius:30px 30px 0 0;
+}
+.gradintext h3, .gradintext1 h3{
     font-size: 35px;
     text-align: center;
 }
@@ -109,7 +159,7 @@ a{
     display: flex;
     align-items: center;
 }
-.texthead hr{
+.texthead hr, .sec3 hr{
     width: 97px !important;
     color: #FF2222;
     height: 3px;
@@ -118,23 +168,45 @@ a{
 .texthead h3{
     color: #FF2222;
     font-weight: 900;
-    font-size: 45px;
     margin-left: 20px;
 }
 .textbody h1{
-    font-size: 65px;
     font-weight: bold;
-    line-height: 75px;
+    margin-top: 2rem;
 }
 .textfoot{
+    margin-left: 25px;
+}
+.sec2{
+    padding-bottom: 7rem;
+}
+.someimg{
+    height: 55px;
+}
+.sec3{
+    background: url(../img/banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding: 3rem 0;
+}
+.our{
+    color: #FF2222;
+    font-weight: 900;
+    margin: 0 2rem;
+}
+.sec3 h1{
+    margin: 1.6rem 0;
+    font-weight: 900;
+}
+.card{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.card:hover .card-body{
+    background: linear-gradient(#FF2222,#FF6F6F);
+    color: #fff;
+}
 
-}
-.textfoot h3{
-    font-size: 45px;
-}
-.textfoot p{
-    font-size: 35px;
-}
 
 
 
