@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -159,8 +161,8 @@ a{
     display: flex;
     align-items: center;
 }
-.texthead hr, .sec3 hr{
-    width: 97px !important;
+.texthead hr, .sec3 hr,.sec5 hr, .box7 hr, .goaltext hr {
+    width: 67px !important;
     color: #FF2222;
     height: 3px;
     opacity: 1 !important;
@@ -188,27 +190,243 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    padding: 3rem 0;
+    padding-top: 4rem;
 }
 .our{
     color: #FF2222;
     font-weight: 900;
     margin: 0 2rem;
+    font-size: 35px;
 }
-.sec3 h1{
+.we{
     margin: 1.6rem 0;
     font-weight: 900;
 }
 .card{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+.card-img-top{
+    filter: brightness(80%);
+}
+.card-body::before{
+    content: attr(data-num);
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 10rem;
+    font-weight: 100;
+    z-index: 1;
+    filter: drop-shadow(0 0 1px rgb(255, 255, 255));
+}
+.card-body h3{
+    z-index: 2;
+}
 .card:hover .card-body{
-    background: linear-gradient(#FF2222,#FF6F6F);
+    background: linear-gradient( 90deg, #FF2222, #FF6F6F);
+    color: #fff;
+    cursor: pointer;
+}
+.card:hover .card-body::before{
+    color: #FF2222;
+}
+.card:hover .card-img-top{
+    filter: brightness(100%);
+}
+.kusok{
+    left: 0;
+    width: 10px;
+    height: 70px;
+    background-color: #FF2222;
+}
+.card:hover .kusok{
+    background-color: #fff;
+}
+.centrum{
+    color: #fff;
+    font-weight: 200;
+    font-size: 100px;
+    font-family: 'Montserrat', sans-serif !important;
+    margin-bottom: 0;
+}
+.our-goals{
+    height: 100vh;
+    background: linear-gradient( 45deg, #FF2222, #FF6F6F);
+}
+.goals{
+    height: 100vh;
+    object-fit: cover;
+}
+.goaltext hr{
     color: #fff;
 }
-
-
-
+.goaltext h1{
+    font-size: 45px;
+    margin: 30px 0;
+}
+.goaltext h3{
+    font-weight: 900;
+    font-size: 34px;
+}
+.goaltext p{
+    font-size: 25px;
+    font-weight: 400;
+    width: 80%;
+}
+.goalsic{
+   width: 109px;
+   height: 108px;
+   margin-top: 15px;
+}
+.sec5{
+    background-color: #F5F5F5;
+    padding: 5rem  0;
+}
+.teammet{
+    margin: 20px 0;
+}
+.sec5 p{
+    font-size: 20px;
+    color: #2D2D2D;
+}
+.teamstaf{
+    width: 200px;
+}
+.team1{
+    left: 20px;
+    top: 40px;
+}
+.team2{
+    bottom: 20px;
+    right: 40px;
+}
+.stafftext span{
+    color: #FF2222;
+}
+.stafftext h3{
+    margin-top: 20px;
+}
+.sec6{
+    padding: 3rem 0;
+}
+.box6{
+    width: 38%;
+}
+.sar{
+    top: 10px;
+    left: -10px;
+}
+.sep{
+    top: 13px;
+    left: 13px;
+}
+.box6text{
+    margin-top: 5rem;
+    margin-left: 2rem;
+}
+.other{
+    color: #2D2D2D;
+    float: right;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+.other:hover{
+    color: #FF2222;
+    cursor: pointer;
+}
+.box6text a{
+    color: red;
+    font-weight: 100;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.sec7{
+    background-color: #F5F5F5;
+    padding: 3rem 0;
+}
+.box7{
+    flex-direction: column;
+}
+.box7 h1{
+    margin: 10px 0;
+    font-size: 44px;
+}
+.mail{
+    border: none;
+    outline: none;
+    background-color: #fff;
+    font-size: 20px;
+    padding: 7px 20px;
+    border-radius: 10px;
+    font-weight: 300;
+    width: 110%;
+}
+.mail::placeholder{
+    color: #868686;
+    font-size: 16px;
+    font-weight: 100;
+}
+.mailbtn{
+    background: linear-gradient( 45deg, #FF2222, #FF6F6F);
+    padding: 15px 10px;
+}
+.mailbtn img{
+    width: 90%;
+}
+.sended{
+    display: none;
+}
+.curer{
+    width: 470px;
+    bottom:0 ;
+    left: -60px;
+}
+.uzor{
+    height: 100%;
+    overflow: visible;
+    bottom:0 ;
+    right: 0;
+}
+.footer{
+    background-color: #2D2D2D;
+    width: 100%;
+    height: 14rem;
+    margin-top: -5px;
+}
+.foot{
+    height: 18rem;
+    background-color: #fff;
+    width: 80%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.199);
+    padding: 3rem;
+    padding-bottom: 1rem;
+}
+.foot1 .fas{
+    width: 55px;
+    font-size: 36px;
+}
+.foot1 p{
+    margin-bottom: 0;
+    float: right;
+}
+.right .col{
+    display: flex;
+    flex-direction: column;
+}
+.right .col a{
+    color: #2D2D2D;
+    text-decoration: underline;
+}
+.fot-socials .fab{
+    color: #2D2D2D;
+    font-size: 40px;
+    margin: 0 10px;
+}
 
 
 
