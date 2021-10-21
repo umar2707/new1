@@ -427,6 +427,9 @@ a{
     font-size: 40px;
     margin: 0 10px;
 }
+.fot-socials .fab:hover, .left .fas:hover{
+    filter: drop-shadow(2px 2px 0px #ff2222);
+}
 
 
 
